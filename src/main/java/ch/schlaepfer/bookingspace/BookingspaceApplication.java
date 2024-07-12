@@ -43,10 +43,10 @@ public class BookingspaceApplication {
 			customerRepository.save(c3);
 			customerRepository.save(c4);
 
-			Booking b1 = new Booking(1L, Date.valueOf(""), BookingTypes.FULL_DAY, BookingStatus.PENDING, 1L, c1);
-			Booking b2 = new Booking(2L, Date.valueOf(""), BookingTypes.HALF_DAY, BookingStatus.PENDING, 2L, c2);
-			Booking b3 = new Booking(3L, Date.valueOf(""), BookingTypes.FULL_DAY, BookingStatus.PENDING, 3L, c3);
-			Booking b4 = new Booking(4L, Date.valueOf(""), BookingTypes.HALF_DAY, BookingStatus.PENDING, 4L, c4);
+			Booking b1 = new Booking(1L, Date.valueOf("2024-01-01"), BookingTypes.FULL_DAY, BookingStatus.PENDING,  c1);
+			Booking b2 = new Booking(2L, Date.valueOf("2024-01-01"), BookingTypes.HALF_DAY, BookingStatus.PENDING, c2);
+			Booking b3 = new Booking(3L, Date.valueOf("2024-01-01"), BookingTypes.FULL_DAY, BookingStatus.PENDING, c3);
+			Booking b4 = new Booking(4L, Date.valueOf("2024-01-01"), BookingTypes.HALF_DAY, BookingStatus.PENDING,  c4);
 
 			bookingRepository.save(b1);
 			bookingRepository.save(b2);

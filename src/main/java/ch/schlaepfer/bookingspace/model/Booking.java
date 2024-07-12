@@ -4,6 +4,7 @@ import ch.schlaepfer.bookingspace.model.Enums.BookingStatus;
 import ch.schlaepfer.bookingspace.model.Enums.BookingTypes;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,14 +21,9 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
     private Date date;
-    @NotBlank
     private BookingTypes bookingType;
-    @NotBlank
     private BookingStatus bookingStatus;
-    @NotBlank
-    private Long memberId;
 
     @ManyToOne
     @JoinColumn(name="customer_id", nullable=true)

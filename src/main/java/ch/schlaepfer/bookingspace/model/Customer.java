@@ -4,6 +4,7 @@ import ch.schlaepfer.bookingspace.model.Enums.Roles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,7 +31,6 @@ public class Customer {
     private String phoneNumber;
     @NotBlank
     private String password;
-    @NotBlank
     private Roles role;
 
 }
