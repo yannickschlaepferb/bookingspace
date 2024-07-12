@@ -52,7 +52,6 @@ public class BookingspaceApplication {
 			bookingRepository.save(b2);
 			bookingRepository.save(b3);
 			bookingRepository.save(b4);
-
 		};
 	}
 
