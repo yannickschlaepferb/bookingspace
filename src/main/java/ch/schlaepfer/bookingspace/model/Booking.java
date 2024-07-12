@@ -2,10 +2,7 @@ package ch.schlaepfer.bookingspace.model;
 
 import ch.schlaepfer.bookingspace.model.Enums.BookingStatus;
 import ch.schlaepfer.bookingspace.model.Enums.BookingTypes;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,5 +27,9 @@ public class Booking {
     @NotBlank
     private BookingStatus bookingStatus;
     @NotBlank
-    private Long customerId;
+    private Long memberId;
+
+    @ManyToOne
+    @JoinColumn(name="customer_id", nullable=true)
+    private Customer customer;
 }
